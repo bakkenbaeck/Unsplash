@@ -1,19 +1,11 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     static let HeaderSize = CGFloat(60)
     var window: UIWindow?
 
-    private lazy var fetcher: Fetcher = {
-        let fetcher = Fetcher(baseURL: "https://server.com", modelName: "DataModel")
-
-        return fetcher
-    }()
-}
-
-extension AppDelegate: UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
@@ -26,7 +18,7 @@ extension AppDelegate: UIApplicationDelegate {
         layout.itemSize = CGSize(width: size, height: size)
         layout.sectionInset = UIEdgeInsets(top: AppDelegate.HeaderSize, left: 0, bottom: 10, right: 0)
 
-        let collectionViewController = CollectionViewController(fetcher: fetcher, collectionViewLayout: layout)
+        let collectionViewController = CollectionViewController(collectionViewLayout: layout)
         collectionViewController.title = "Remote"
 
         self.window?.rootViewController = collectionViewController

@@ -14,12 +14,10 @@ public class Fetcher {
         self.networking = Networking(baseURL: baseURL)
     }
 
-    public func someResource(completion: (error: NSError?) -> ()) {
-        self.networking.GET("/someResource") { JSON, error in
+    public func getPhoto(completion: (error: NSError?) -> ()) {
+        self.networking.GET("/100/100/?random") { JSON, error in
             if let JSON = JSON as? [[String : AnyObject]] {
-                Sync.changes(JSON, inEntityNamed: "SomeEntityName", dataStack: self.data, completion: { error in
-                    completion(error: error)
-                })
+
             } else {
                 completion(error: error)
             }
