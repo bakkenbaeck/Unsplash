@@ -1,18 +1,55 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @marijnschilling
+ Watch 15
+  Star 1
+ Fork 3 bakkenbaeck/app-template
+forked from 3lvis/app-template
+ Code  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Branch: master Find file Copy pathapp-template/.gitignore
+1ca2cf2  on Apr 28
+@3lvis 3lvis Add Carthage Checkouts folder to gitignore
+1 contributor
+RawBlameHistory     37 lines (33 sloc)  362 Bytes
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
 
-Project.xcodeproj/xcuserdata/marijnschilling.xcuserdatad/xcschemes/xcschememanagement.plist
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcscmblueprint
+*.gcno
+*.gcda
 
-.idea/xcode.xml
+# CocoaPods
+Pods
 
-.idea/workspace.xml
-
-.idea/vcs.xml
-
-.idea/Unsplash.iml
-
-.idea/modules.xml
-
-.idea/misc.xml
-
-.idea/.name
-
-Project.xcworkspace/xcuserdata/marijnschilling.xcuserdatad/UserInterfaceState.xcuserstate
+# Carthage
+Checkouts
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
