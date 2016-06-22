@@ -1,20 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @marijnschilling
- Watch 15
-  Star 1
- Fork 3 bakkenbaeck/app-template
-forked from 3lvis/app-template
- Code  Pull requests 0  Wiki  Pulse  Graphs  Settings
-Branch: master Find file Copy pathapp-template/.gitignore
-1ca2cf2  on Apr 28
-@3lvis 3lvis Add Carthage Checkouts folder to gitignore
-1 contributor
-RawBlameHistory     37 lines (33 sloc)  362 Bytes
 # OS X
 .DS_Store
 .AppleDouble
@@ -25,7 +8,6 @@ Icon
 .Trashes
 
 # Xcode
-#
 build/
 *.pbxuser
 !default.pbxuser
@@ -51,19 +33,12 @@ Pods
 
 # Carthage
 Checkouts
-Status API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help
 
+# AppCore
 .idea/.name
-
 .idea/misc.xml
-
 .idea/modules.xml
-
 .idea/Unsplash.iml
-
 .idea/vcs.xml
-
 .idea/workspace.xml
-
 .idea/xcode.xml
