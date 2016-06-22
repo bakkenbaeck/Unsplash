@@ -1,6 +1,6 @@
 import UIKit
 
-class RootController: BaseViewController {
+class CollectionViewController: BaseCollectionViewController {
     override func loadView() {
         let view = RootView(frame: UIScreen.mainScreen().bounds)
         self.view = view
