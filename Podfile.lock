@@ -13,6 +13,7 @@ PODS:
     - NSEntityDescription-SYNCPrimaryKey (~> 1.2.3)
     - NSString-HYPNetworking (~> 1.0.2)
   - NSString-HYPNetworking (1.0.2)
+  - SectionScrubber (0.1.0)
   - Sync (1.9.0):
     - DATAFilter (~> 0.10.0)
     - DATAStack (~> 5.2.1)
@@ -24,7 +25,17 @@ DEPENDENCIES:
   - DATASource
   - Hex
   - Networking
+  - SectionScrubber (from `git@github.com:bakkenbaeck/SectionScrubber.git`)
   - Sync
+
+EXTERNAL SOURCES:
+  SectionScrubber:
+    :git: git@github.com:bakkenbaeck/SectionScrubber.git
+
+CHECKOUT OPTIONS:
+  SectionScrubber:
+    :commit: 3fa30e2978a556e3fb8799a3f121afdf0474e262
+    :git: git@github.com:bakkenbaeck/SectionScrubber.git
 
 SPEC CHECKSUMS:
   DATAFilter: b6662b05dd0dcf658d526aa0f9095bb202d7b10e
@@ -37,8 +48,9 @@ SPEC CHECKSUMS:
   NSEntityDescription-SYNCPrimaryKey: 9dbb89d7cbc1bea196dd935725bfcf3c0ff4249c
   NSManagedObject-HYPPropertyMapper: 1a34418531715f01520eb32abcd2c183952ea630
   NSString-HYPNetworking: 7c18e44ca9529d2f74a30a1c2a7a787da76198c1
+  SectionScrubber: afc0a47b29d330fd93b5a8b54d6ab31eb9321013
   Sync: f39edb4e3b931fdc387e836200c235a54750e072
 
-PODFILE CHECKSUM: 70d4415cb709770963eac8003d29bfbbc008aae9
+PODFILE CHECKSUM: c409de7f82ca8f1dadb9eac4785a9833a96bf763
 
 COCOAPODS: 1.0.0

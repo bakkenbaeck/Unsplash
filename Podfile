@@ -5,6 +5,7 @@ target 'iOS' do
   pod 'Networking'
   pod 'DATASource'
   pod 'Hex'
+  pod 'SectionScrubber', git: 'git@github.com:bakkenbaeck/SectionScrubber.git'
 end
 
 target 'Tests' do
