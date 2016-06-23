@@ -1,13 +1,23 @@
 import UIKit
 
 class CollectionViewController: UICollectionViewController {
-    override func loadView() {
-        let view = RootView(frame: UIScreen.mainScreen().bounds)
-        self.view = view
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.collectionView?.registerClass(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.Identifier)
+
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        let columns = CGFloat(4)
+        let bounds = UIScreen.mainScreen().bounds
+        let size = (bounds.width - columns) / columns
+        layout.itemSize = CGSize(width: size, height: size)
+        layout.headerReferenceSize = CGSizeMake(bounds.width, 22);
     }
 }
 
@@ -21,13 +31,10 @@ extension CollectionViewController {
         return 10
     }
 
-    override func collectionView(collectionView: PhotoCell.identifier, cellForItemAtIndexPath indexPath: NSIndexPath) -> PhotoCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(UICollectionViewCell.reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PhotoCell.Identifier, forIndexPath: indexPath) as! PhotoCell
 
-        let imageView = UIImageView()
-        imageView.downloadedFrom(link: "https://unsplash.it/100/100/?random")
-
-        cell.addSubview(imageView)
+//        if let url = NSURL(string: "https://unsplash.it/100/100/?random") {
 
         return cell
     }
@@ -35,19 +42,19 @@ extension CollectionViewController {
 }
 
 extension UIImageView {
-    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
+    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .ScaleAspectFit) {
+        guard let url = NSURL(string: link) else { return }
         contentMode = mode
-        URLSession.shared().dataTask(with: url) { (data, response, error) in
+        NSURLSession.sharedSession().dataTaskWithURL(url){ (data, response, error) in
             guard
-            let httpURLResponse = response as? HTTPURLResponse where httpURLResponse.statusCode == 200,
-            let mimeType = response?.mimeType where mimeType.hasPrefix("image"),
+            let httpURLResponse = response as? NSHTTPURLResponse where httpURLResponse.statusCode == 200,
+            let mimeType = response?.MIMEType where mimeType.hasPrefix("image"),
             let data = data where error == nil,
             let image = UIImage(data: data)
             else { return }
-            DispatchQueue.main.sync() { () -> Void in
+            dispatch_async(dispatch_get_main_queue(), {
                 self.image = image
-            }
+            })
         }.resume()
     }
 }
