@@ -34,11 +34,5 @@ Pods
 # Carthage
 Checkouts
 
-# AppCore
-.idea/.name
-.idea/misc.xml
-.idea/modules.xml
-.idea/Unsplash.iml
-.idea/vcs.xml
-.idea/workspace.xml
-.idea/xcode.xml
+# AppCode
+*.idea/
