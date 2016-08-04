@@ -12,10 +12,10 @@ public class Fetcher {
     init(baseURL: String, modelName: String) {
         self.data = DATAStack(modelName: modelName)
         self.networking = Networking(baseURL: baseURL)
-        self.networking.fakeGET("/list", fileName: "people.json")
+//        self.networking.fakeGET("/list", fileName: "photos.json")
     }
 
-    public func someResource(completion: (error: NSError?) -> ()) {
+    public func photos(completion: (error: NSError?) -> ()) {
         self.networking.GET("/list") { JSON, error in
             if let JSON = JSON as? [[String : AnyObject]] {
                 Sync.changes(JSON, inEntityNamed: "Photo", dataStack: self.data, completion: { error in
@@ -25,5 +25,9 @@ public class Fetcher {
                 completion(error: error)
             }
         }
+    }
+
+    var viewContext: NSManagedObjectContext {
+        return self.data.mainContext
     }
 }

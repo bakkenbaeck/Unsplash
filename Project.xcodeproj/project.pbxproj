@@ -32,6 +32,7 @@
 		D197B859601E9DAC3C72A2DD /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = D197BD0B595B5FF7265DA07D /* photos.json */; };
 		E65DF4FB1D53890D002AEABB /* _Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DF4F91D53890D002AEABB /* _Photo.swift */; };
 		E65DF4FC1D53890D002AEABB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DF4FA1D53890D002AEABB /* Photo.swift */; };
+		E65DF4FE1D53B6C4002AEABB /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65DF4FD1D53B6C4002AEABB /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		D197BD0B595B5FF7265DA07D /* photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
 		E65DF4F91D53890D002AEABB /* _Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Photo.swift; sourceTree = "<group>"; };
 		E65DF4FA1D53890D002AEABB /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		E65DF4FD1D53B6C4002AEABB /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				146E27A41BCD51F200959BBA /* AppDelegate.swift */,
 				146E27A51BCD51F200959BBA /* RootController.swift */,
 				146E27A61BCD51F200959BBA /* RootView.swift */,
+				E65DF4FD1D53B6C4002AEABB /* PhotoCell.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				146E27AC1BCD51F200959BBA /* AppDelegate.swift in Sources */,
 				14425E551C97078A00F0FAD1 /* UIColor+Custom.swift in Sources */,
 				146E27AE1BCD51F200959BBA /* RootView.swift in Sources */,
+				E65DF4FE1D53B6C4002AEABB /* PhotoCell.swift in Sources */,
 				146E27AD1BCD51F200959BBA /* RootController.swift in Sources */,
 				14CB87E61C96F94F007376A6 /* DataModel.xcdatamodeld in Sources */,
 				14425E5B1C97078A00F0FAD1 /* BaseCollectionViewController.swift in Sources */,
